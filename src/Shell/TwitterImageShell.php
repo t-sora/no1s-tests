@@ -8,10 +8,10 @@ use Psy\Shell as PsyShell;
 
 class TwitterImageShell extends Shell
 {
-    const CONSUMER_KEY = "UhuBsj54DbRnnHGQYaPywHmAi"; // CONSUMER_KEYを入力
-    const CONSUMER_SECRET = "e1zSaGoQorVKzyW5W7U8LaAmkUsf3nnjdIHCxh45Y03bnnBj86"; // CONSUMER_SECRETを入力
-    const ACCESS_TOKEN = "42566916-5CI2BDtmiUQdWFKtTY6ajgxmLlYjURI4ftW2K88h3"; // ACCESS_TOKENを入力
-    const ACCESS_TOKEN_SECRET = "YHfdFB1RJxIcHQ6XOriX0GZhmZmFpNmI5wegaBIRDflIU"; // ACCESS_TOKEN_SECRETを入力
+    const CONSUMER_KEY = ""; // CONSUMER_KEYを入力
+    const CONSUMER_SECRET = ""; // CONSUMER_SECRETを入力
+    const ACCESS_TOKEN = ""; // ACCESS_TOKENを入力
+    const ACCESS_TOKEN_SECRET = ""; // ACCESS_TOKEN_SECRETを入力
     const TWITTER_API_URL = "https://api.twitter.com/1.1/search/tweets.json";
     const OAUTH_VERSION = "1.0";
     const OAUTH_SIGNATURE_METHOD = "HMAC-SHA1";
