@@ -19,10 +19,11 @@ class CrawlerShell extends Shell
     {
         $this->out("------------Crawler実行スタート------------");
         $url = self::BASE_URL;
-        $res = $this->execute($url, true);
-        if (!$res) {
+        if (!$this->isCheckUrl($url)) {
             exit("\n------------エラー終了------------\n");
         }
+
+        $this->execute($url, true);
 
         $this->dump();
         $this->out("------------Crawler実行終了------------");
@@ -34,19 +35,6 @@ class CrawlerShell extends Shell
     private function execute($url, $isFirst = false)
     {
         echo ".";
-
-        // url末尾に/がついていない場合
-        if (!preg_match("</$>", $url)) {
-            $url = $url."/";
-        }
-
-        if (!$this->isCheckUrl($url)) {
-            $this->exeNum++;
-            if (!empty($this->targets[$this->exeNum]['url'])) {
-                $this->execute($this->targets[$this->exeNum]['url']);
-            }
-            return false;
-        }
 
         $dom = HtmlDomParser::file_get_html($url);
         $this->response[] = [
@@ -85,8 +73,6 @@ class CrawlerShell extends Shell
         if (!empty($this->targets[$this->exeNum]['url'])) {
             $this->execute($this->targets[$this->exeNum]['url']);
         }
-
-        return true;
     }
 
     /**
