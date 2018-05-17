@@ -56,11 +56,6 @@ class TwitterImageShell extends Shell
         }
         $this->out("------------出力終了------------");
         $this->out("画像ファイル出力先：{$output_path}");
-
-        // デバック用
-        Log::debug($response);
-        Log::debug("========= exports ==========");
-        Log::debug($exports);
     }
 
     public function getTweetImageApi()

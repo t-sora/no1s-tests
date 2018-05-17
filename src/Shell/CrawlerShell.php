@@ -26,9 +26,6 @@ class CrawlerShell extends Shell
 
         $this->dump();
         $this->out("------------Crawler実行終了------------");
-
-        // デバック用
-        Log::debug($this->response);
     }
 
     /**
