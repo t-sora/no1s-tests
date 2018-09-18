@@ -25,3 +25,15 @@ bin/cake TwitterImage
 cd ~/no1s-tests
 
 bin/cake Crawler
+
+### SheetsApis
+cd ~/no1s-tests
+
+bin/cake SheetsApi
+
+(※)API_KEYをセットしてから実施してください
+
+### GUI
+cd ~/no1s-tests/webroot/mario/
+
+上記フォルダにある mario.html を直接ブラウザに表示して実施してください
